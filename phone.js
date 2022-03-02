@@ -7,6 +7,8 @@ const main = (control) => {
   document.getElementById("main").style.display = control;
 };
 
+
+// Getting phone
 const getPhone = () => {
   // getting input value
   const searchResult = document.getElementById("search-result");
@@ -96,7 +98,7 @@ const detail = (id) => {
   detail.textContent = "";
 
   const detailDiv = document.createElement("div");
-  detailDiv.classList.add("seePhoneDetails");
+  detailDiv.classList.add("seePhonepushDetails");
   detailDiv.innerHTML = `
   <div class="card flex-lg-row ">
   <div class="d-flex align-items-center justify-content-center"> <img style="width:30rem;" src="${
