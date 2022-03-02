@@ -5,3 +5,23 @@
     color:blueviolet;
     font-family:'Poppins', sans-seri ;
 }
+#button-addon2{
+    background-color: blueviolet;
+    color: white;
+    border: 1% solid white;
+}
+
+.moreInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+ 
+}
+#spinner {
+  display: none;
+}
+.details-btn{
+    background-color: blueviolet;
+    color: white;
+}
