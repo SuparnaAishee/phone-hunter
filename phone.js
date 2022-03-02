@@ -7,7 +7,7 @@ const main = (control) => {
   document.getElementById("main").style.display = control;
 };
 
-const getApi = () => {
+const getPhone = () => {
   // getting input value
   const searchResult = document.getElementById("search-result");
   const searchValue = searchResult.value.toLowerCase();
@@ -40,16 +40,40 @@ const showResult = (phones) => {
       const div = document.createElement("div");
       div.innerHTML = `
     <div class="col">
-            <div class="card">
-              <img src="${phone.image}" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title"><b>Brand:</b> ${phone.brand}</h5>
-                <p class="card-text">
-                  <b>Model:</b> ${phone.phone_name}
-                </p>
-                <button onclick='showMore("${phone.slug}")' class=" secondary btn btn details-btn" >Details</button>
-              </div>
-            </div>
+            <div class="col">
+    <div class="card h-50 w-70 card-design border border-success">
+      <img src="${phone.image}" alt="${phone.phone_name}" class="card-img-top img-fluid"
+        style="height: 370px;  border-radius: 10px" alt="...">
+      <div class="card-body">
+        <table class="table">
+          <tbody class="text-start">
+            <tr>
+              <th>Phone Name</th>
+              <th>:</th>
+              <th>${phone.phone_name}</th>
+            </tr>
+            <tr>
+              <th>Brand</th>
+              <th>:</th>
+              <th>${phone.brand}</th>
+            </tr>
+            <tr>
+              <th>Phone slug</th>
+              <th>:</th>
+              <th>${phone.slug}</th>
+            </tr>
+
+          </tbody>
+
+        </table>
+        <div class="d-flex justify-content-center align-items-center">
+          <button onclick='showMore("${phone.slug}")' class=" secondary btn btn details-btn">Details</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
           </div>
     `;
 
@@ -72,9 +96,9 @@ const detail = (id) => {
   detail.textContent = "";
 
   const detailDiv = document.createElement("div");
-  detailDiv.classList.add("seeDetails");
+  detailDiv.classList.add("seePhoneDetails");
   detailDiv.innerHTML = `
-  <div class="card flex-lg-row">
+  <div class="card flex-lg-row ">
   <div class="d-flex align-items-center justify-content-center"> <img style="width:30rem;" src="${
     id.image
   }" class="card-img-top img-fluid" alt="..."></div>
