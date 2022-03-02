@@ -13,11 +13,11 @@ const getPhone = () => {
   // getting input value
   const searchResult = document.getElementById("search-result");
   const searchValue = searchResult.value.toLowerCase();
-  // handle if searchbox is empty
+  // handle if searchbox is empty//
   if (searchValue == "") {
     alert("please write something ");
   } else {
-    // fetch url
+    // fetching  url
     fetch(
       `https://openapi.programming-hero.com/api/phones?search=${searchValue}`
     )
