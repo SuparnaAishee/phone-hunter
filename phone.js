@@ -151,3 +151,5 @@ const detail = (id) => {
   `;
   detail.appendChild(detailDiv);
 };
+
+// Code end
